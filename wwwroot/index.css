@@ -1,0 +1,27 @@
+body{
+    background-color: rgb(28, 28, 28);
+    color: white;
+}
+
+.container{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.row1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    font-size: 100px;
+}
+
+p{
+    margin-left: 40px;
+    width: 400px;
+}
+a{
+    font-size: 20px;
+    margin: 30px;
+}

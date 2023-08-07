@@ -1,42 +1,42 @@
 using Microsoft.AspNetCore.Mvc;
+using System.Diagnostics;
+
+
+
 namespace portfolio_1.Controllers;
 public class PortfolioController : Controller
 {
 
-
-
-
-    // Route declaration Option A
-    // This will go to "localhost:5XXX"
-    [HttpGet]
-    [Route("")]
-    public string Index()
+[HttpGet("")]
+    public ViewResult Home()
     {
-        return "This is my index";
+
+        return View("Index");
     }
-    
 
 
 
-    // Route declaration Option B
-    // This will go to "localhost:5XXX/projects"
-    
+    [HttpGet("home")]
+    public ViewResult Index()
+    {
+
+        return View("Index");
+    }
+
     [HttpGet("projects")]
-    public string Projects()
+    public ViewResult Projects()
     {
-        return "These are my Projects";
+        return View("MyProjects");
     }
-    
 
-   // Route declaration Option C
-    // This will go to "localhost:5XXX/contact"
-    
+
+
     [HttpGet("contact")]
-    public string Contact()
+    public ViewResult Contact()
     {
-        return "This is my Contact";
+        return View("Contact");
     }
-    
+
 
 
 
@@ -48,7 +48,7 @@ public class PortfolioController : Controller
     // Note: You will not be able to navigate to this route! This is for demonstration only!
     public string FormSubmission(string formInput)
     {
-    	// Logic for post request here
+        // Logic for post request here
         return "I handled a request!";
     }
 }
